@@ -62,15 +62,17 @@ public class AlarmRecordResult {
 
     private String responseMessage;
 
-    private Integer extractInfoPromptTokens;
-    private Integer extractInfoCompletionTokens;
-    private Integer extractInfoTotalTokens;
-    private Integer classifyMultiPromptTokens;
-    private Integer classifyMultiCompletionTokens;
-    private Integer classifyMultiTotalTokens;
     private Integer classifyBinaryPromptTokens;
     private Integer classifyBinaryCompletionTokens;
     private Integer classifyBinaryTotalTokens;
+    private Integer classifyMultiPromptTokens;
+    private Integer classifyMultiCompletionTokens;
+    private Integer classifyMultiTotalTokens;
+    private Integer extractInfoPromptTokens;
+    private Integer extractInfoCompletionTokens;
+    private Integer extractInfoTotalTokens;
+
+
 
     private Long extractInfoUseTime;
     private Long classifyMultiUseTime;

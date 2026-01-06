@@ -61,6 +61,33 @@ public class ReadAlarmDataImpl extends ServiceImpl<AlarmData2Dao, AlarmData2> im
             recordResult.setResponseMessage(item.getResponseMessage());
             recordResult.setAttackType(item.getAiAttackType());
             recordResult.setIsSafeAttack(item.getAiTag());
+            if (StringUtils.isNotEmpty(item.getPromptTokens1())) {
+                recordResult.setClassifyBinaryPromptTokens(Integer.valueOf(item.getPromptTokens1()));
+            }
+            if (StringUtils.isNotEmpty(item.getTotalTokens1())) {
+                recordResult.setClassifyBinaryTotalTokens(Integer.valueOf(item.getTotalTokens1()));
+            }
+            if (StringUtils.isNotEmpty(item.getCompletionTokens1())) {
+                recordResult.setClassifyBinaryCompletionTokens(Integer.valueOf(item.getCompletionTokens1()));
+            }
+            if (StringUtils.isNotEmpty(item.getTotalTokens2())) {
+                recordResult.setClassifyMultiTotalTokens(Integer.valueOf(item.getTotalTokens2()));
+            }
+            if (StringUtils.isNotEmpty(item.getPromptTokens2())) {
+                recordResult.setClassifyMultiPromptTokens(Integer.valueOf(item.getPromptTokens2()));
+            }
+            if (StringUtils.isNotEmpty(item.getCompletionTokens2())) {
+                recordResult.setClassifyMultiCompletionTokens(Integer.valueOf(item.getCompletionTokens2()));
+            }
+            if (StringUtils.isNotEmpty(item.getTotalTokens3())) {
+                recordResult.setExtractInfoTotalTokens(Integer.valueOf(item.getTotalTokens3()));
+            }
+            if (StringUtils.isNotEmpty(item.getPromptTokens3())) {
+                recordResult.setExtractInfoPromptTokens(Integer.valueOf(item.getPromptTokens3()));
+            }
+            if (StringUtils.isNotEmpty(item.getCompletionTokens3())) {
+                recordResult.setExtractInfoCompletionTokens(Integer.valueOf(item.getCompletionTokens3()));
+            }
             results.add(recordResult);
         });
       //  log.info("recordResult数据{}",results.get(0));
@@ -86,6 +113,15 @@ public class ReadAlarmDataImpl extends ServiceImpl<AlarmData2Dao, AlarmData2> im
         recordResult.setPayload(alarmData2.getPayload());
         recordResult.setAttackType(alarmData2.getAiAttackType());
         recordResult.setIsSafeAttack(alarmData2.getAiTag());
+        recordResult.setClassifyBinaryPromptTokens(Integer.valueOf(alarmData2.getPromptTokens1()));
+        recordResult.setClassifyBinaryTotalTokens(Integer.valueOf(alarmData2.getTotalTokens1()));
+        recordResult.setClassifyBinaryCompletionTokens(Integer.valueOf(alarmData2.getCompletionTokens1()));
+        recordResult.setClassifyMultiTotalTokens(Integer.valueOf(alarmData2.getTotalTokens2()));
+        recordResult.setClassifyMultiPromptTokens(Integer.valueOf(alarmData2.getPromptTokens2()));
+        recordResult.setClassifyMultiCompletionTokens(Integer.valueOf(alarmData2.getCompletionTokens2()));
+        recordResult.setExtractInfoTotalTokens(Integer.valueOf(alarmData2.getTotalTokens3()));
+        recordResult.setExtractInfoPromptTokens(Integer.valueOf(alarmData2.getPromptTokens3()));
+        recordResult.setExtractInfoCompletionTokens(Integer.valueOf(alarmData2.getCompletionTokens3()));
         return recordResult;
     }
 
@@ -107,6 +143,33 @@ public class ReadAlarmDataImpl extends ServiceImpl<AlarmData2Dao, AlarmData2> im
         recordResult.setPayload(alarmData2.getPayload());
         recordResult.setAttackType(alarmData2.getAiAttackType());
         recordResult.setIsSafeAttack(alarmData2.getAiTag());
+        if(StringUtils.isNotEmpty(alarmData2.getPromptTokens1())){
+            recordResult.setClassifyBinaryPromptTokens(Integer.valueOf(alarmData2.getPromptTokens1()));
+        }
+        if (StringUtils.isNotEmpty(alarmData2.getTotalTokens1())) {
+            recordResult.setClassifyBinaryTotalTokens(Integer.valueOf(alarmData2.getTotalTokens1()));
+        }
+        if (StringUtils.isNotEmpty(alarmData2.getCompletionTokens1())) {
+            recordResult.setClassifyBinaryCompletionTokens(Integer.valueOf(alarmData2.getCompletionTokens1()));
+        }
+        if (StringUtils.isNotEmpty(alarmData2.getTotalTokens2())) {
+            recordResult.setClassifyMultiTotalTokens(Integer.valueOf(alarmData2.getTotalTokens2()));
+        }
+        if (StringUtils.isNotEmpty(alarmData2.getPromptTokens2())) {
+            recordResult.setClassifyMultiPromptTokens(Integer.valueOf(alarmData2.getPromptTokens2()));
+        }
+        if (StringUtils.isNotEmpty(alarmData2.getCompletionTokens2())) {
+            recordResult.setClassifyMultiCompletionTokens(Integer.valueOf(alarmData2.getCompletionTokens2()));
+        }
+        if (StringUtils.isNotEmpty(alarmData2.getTotalTokens3())) {
+            recordResult.setExtractInfoTotalTokens(Integer.valueOf(alarmData2.getTotalTokens3()));
+        }
+        if (StringUtils.isNotEmpty(alarmData2.getPromptTokens3())) {
+            recordResult.setExtractInfoPromptTokens(Integer.valueOf(alarmData2.getPromptTokens3()));
+        }
+        if (StringUtils.isNotEmpty(alarmData2.getCompletionTokens3())) {
+            recordResult.setExtractInfoCompletionTokens(Integer.valueOf(alarmData2.getCompletionTokens3()));
+        }
         return recordResult;
     }
 

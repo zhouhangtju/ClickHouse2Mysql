@@ -63,6 +63,27 @@ public class AlarmData2 {
     @TableField("SRC_PORT")
     private String srcPort;
 
+    @TableField("PROMPT_TOKENS1")
+    private String promptTokens1;
 
+    @TableField("COMPLETION_TOKENS1")
+    private String completionTokens1;
+    @TableField("TOTAL_TOKENS1")
+    private String totalTokens1;
 
+    @TableField("PROMPT_TOKENS2")
+    private String promptTokens2;
+
+    @TableField("COMPLETION_TOKENS2")
+    private String completionTokens2;
+    @TableField("TOTAL_TOKENS2")
+    private String totalTokens2;
+
+    @TableField("PROMPT_TOKENS3")
+    private String promptTokens3;
+
+    @TableField("COMPLETION_TOKENS3")
+    private String completionTokens3;
+    @TableField("TOTAL_TOKENS3")
+    private String totalTokens3;
 }
